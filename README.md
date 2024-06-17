@@ -1,8 +1,8 @@
-# books_ranking
+# rakutenbooks-ranking
 
 楽天ブックスのカテゴリ別に売れ筋ランキングを表示するアプリ
 
 ## 目的
 
-* APIの学習
-* アプリ開発に慣れる
+* APIの使い方を学習する
+* Flutterでのアプリ開発に慣れる
