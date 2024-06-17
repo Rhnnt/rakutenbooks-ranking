@@ -1,4 +1,6 @@
+import 'package:books_ranking/widgets/genre_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:dio/dio.dart';
 import 'package:books_ranking/models/book.dart';
@@ -60,27 +62,17 @@ class _BooksRankingState extends State<BooksRanking> {
       ),
       drawer: Drawer(
         child: ListView(
-          children: <Widget>[
-            const DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
+          children: const <Widget>[
+            SizedBox(
+              height: 80,
+              child: DrawerHeader(
+                child: Text(
+                  'Categories',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                ),
               ),
             ),
-            ListTile(
-              title: Text('001005'),
-              onTap: () {
-                fetchBooks(categoryId: '001005');
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('001006'),
-              onTap: () {
-                fetchBooks(categoryId: '001006');
-                Navigator.pop(context);
-              },
-            ),
+            GenreList(),
           ],
         ),
       ),
@@ -97,7 +89,7 @@ class _BooksRankingState extends State<BooksRanking> {
               child: ListTile(
                 hoverColor: const Color.fromARGB(255, 168, 210, 245),
                 leading: SizedBox(
-                  width: 30,
+                  width: 20,
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
