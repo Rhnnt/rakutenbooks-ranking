@@ -64,11 +64,15 @@ class _BooksRankingState extends State<BooksRanking> {
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 80,
+              height: 120,
               child: DrawerHeader(
-                child: Text(
-                  'Categories',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                decoration: BoxDecoration(border: Border()),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Categories',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
             ),
