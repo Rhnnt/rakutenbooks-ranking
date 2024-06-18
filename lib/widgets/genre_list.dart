@@ -64,6 +64,7 @@ class _GenreListState extends State<GenreList> {
           title: Text(genres[index].name),
           onExpansionChanged: (value) {
             widget.onCallFunction!(categoryId: genres[index].id);
+            Navigator.of(ctx).pop();
           },
         );
       },
