@@ -61,9 +61,9 @@ class _BooksRankingState extends State<BooksRanking> {
         title: const Text("Category name"),
       ),
       drawer: Drawer(
-        child: ListView(
-          children: const <Widget>[
-            SizedBox(
+        child: Column(
+          children: <Widget>[
+            const SizedBox(
               height: 80,
               child: DrawerHeader(
                 child: Text(
@@ -72,7 +72,11 @@ class _BooksRankingState extends State<BooksRanking> {
                 ),
               ),
             ),
-            GenreList(),
+            Expanded(
+              child: GenreList(
+                onCallFunction: fetchBooks,
+              ),
+            ),
           ],
         ),
       ),
